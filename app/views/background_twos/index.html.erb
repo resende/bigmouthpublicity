@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Background Twos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @background_twos.each do |background_two| %>
+      <tr>
+        <td><%= background_two.image %></td>
+        <td><%= background_two.active %></td>
+        <td><%= link_to 'Show', background_two %></td>
+        <td><%= link_to 'Edit', edit_background_two_path(background_two) %></td>
+        <td><%= link_to 'Destroy', background_two, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Background two', new_background_two_path %>
